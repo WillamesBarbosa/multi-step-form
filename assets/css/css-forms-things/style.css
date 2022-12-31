@@ -1,0 +1,307 @@
+.form-things{
+    flex: 70%;
+    
+    overflow-x: hidden;
+}
+
+
+
+.form-things .forms-complete{
+    width: 500%;
+    height: 100%;
+    
+}
+
+.forms-complete{
+    display: flex;
+    flex-direction: row;
+}
+
+.forms-complete .container{
+    width: 20%;
+    height: 100%;
+    
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    
+    margin: auto;
+}
+
+.form-title{
+    flex: 25%;
+}
+
+.primmary-title-form{
+    color: #0a2a5a;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.primmary-description-form{
+    color: #98999c;
+    font-size: 13px;
+}
+
+.form-content{
+    flex: 50%;
+}
+
+.form-content .content{
+    height: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.content label{
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 14px;
+    color: #02102a;
+}
+
+.content label:first-child{
+    margin-top: 0;
+}
+
+.content input{
+    margin-top: 0.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    border: 1px solid #d9d8dc;
+}
+
+.content input::placeholder{
+   padding: 10px;
+   color: #a8a8b0;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex: 70%;
+    justify-content: space-around;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 9rem;
+    width: 7rem;
+    border: 1px solid #d9d8dc;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.card.selected-card{
+    background-color: #f8f9fe;
+    border: 1px solid #7e77b3;
+}
+
+
+.card:hover{
+    border: 1px solid #7e77b3;
+}
+
+.image-content{
+    flex: 70%;
+}
+
+.text-card-content{
+    flex: 30%;
+}
+
+.title-card{
+    color: #0c2443;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.price-card{
+    color: #b4b4be;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+}
+
+.time-year{
+    display: none;
+    color: #1f2f45;
+    font-size: 11px;
+    font-weight: 400;
+    margin-top: 0.3rem;
+}
+
+
+.month-age{
+    flex: 30%;
+}
+
+.options{
+    height: 2.5rem;
+    background-color: #f8f9fe;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.month{
+    color: #1a365a;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.year{
+    color: #aaaab3;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .checkbox-time-option .ball-option{
+    transform: translateX(0.95rem);
+}
+
+.checkbox-time-option{
+    background-color: #02295b;
+    cursor: pointer;
+    justify-content: center;
+    position: relative;
+    border-radius: 50px;
+    height: 1rem;
+    width: 2rem;
+    margin: 0.7rem;
+}
+
+.checkbox-time-option .ball-option{
+    height: 0.8rem;
+    width: 0.8rem;
+    content: " ";
+    background-color: #fdffff;
+    border-radius: 50%;
+    position: absolute;
+    top:0.07rem;
+    left: 0.1rem;
+    transition: transform 0.2s linear;
+    
+}
+
+
+
+.container-addons{
+    display: flex;
+    flex-direction: row;
+    height: 4rem;
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #d9d8dc;
+}
+
+.container-addons:hover{
+    border: 1px solid #7e77b3;
+}
+
+.container-addons.selected{
+    background-color: #f8f9fe;
+    border: 1px solid #7e77b3;
+}
+
+.container-checkbox-addons{
+    height: 100%;
+    flex: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.label-addons-title{
+    height: 100%;
+    flex: 65%;
+}
+
+.addons-title{
+    color:#152942;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.label-addons-price{
+    height: 100%;
+    flex: 20%;
+}
+
+.addons-description{
+    color: #acadb7;
+    font-weight: 400;
+    font-size: 12px;
+    
+}
+
+.label-addons-price p{
+    margin-top: 0.5rem;
+    color: #807cc1;
+}
+
+.form-button{
+    flex: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.next{
+    height: 2.5rem;
+    width: 6rem;
+    margin-top: 4rem;
+    border: 1px solid #102742;
+    background-color: #102742;
+    color: #f0ffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.next:hover{
+    background-color: #174a8a;
+}
+
+.back{
+    height: 2.5rem;
+    font-weight: bold;
+    width: 6rem;
+    background-color: #0000;
+    border: none;
+    margin-top: 4rem;
+    color: #a9a9b3;
+    cursor: pointer;
+}
+
+.back:hover{
+    color: #1b2a43;
+}
+
+.back-1{
+    visibility: hidden;
+}
+
