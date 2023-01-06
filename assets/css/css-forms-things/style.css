@@ -210,7 +210,6 @@
     flex-direction: row;
     height: 4rem;
     width: 100%;
-    border: 1px solid black;
     margin-bottom: 1rem;
     border-radius: 10px;
     border: 1px solid #d9d8dc;
@@ -261,6 +260,36 @@
 .label-addons-price p{
     margin-top: 0.5rem;
     color: #807cc1;
+}
+
+
+.last-screen{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.svg{
+    flex: 40%;
+    margin: auto;
+}
+
+.thanks{
+    flex: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    color: #0a2a5a;
+}
+
+.thanks-text{
+    flex: 40%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 0.5rem;
+    color: #acadb7;
 }
 
 .form-button{

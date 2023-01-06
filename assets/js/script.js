@@ -49,7 +49,7 @@ function stepsNumbers(actualStep){
     }else if( actualStep === 3){
         steps[actualStep - 1].classList.remove('here');
         steps[actualStep].classList.add('here');
-
+        
         numbers[actualStep - 1].classList.remove('here');
         numbers[actualStep].classList.add('here');
 
@@ -71,6 +71,7 @@ function stepsNumbers(actualStep){
 }
 
 function monthAndYear(){
+    let trueFalse = false;
     
     document.addEventListener('click', e=>{
         const elemento = e.target;
@@ -82,7 +83,9 @@ function monthAndYear(){
                 month.style.fontWeight = 'bold'
                 month.style.color = '#1a365a'
                 
-                checkbox.checked = false;  
+                checkbox.checked = false;
+                trueFalse = checkbox.checked;
+                console.log(trueFalse);
 
                 
 
@@ -106,27 +109,46 @@ function monthAndYear(){
 }
 
 function pricePerMonthOrYear(condition){
-    let conditionMonthYear = condition;
-priceCard.forEach(function(preco, index){
-        if( conditionMonthYear = condition){
-            let sum = 90+(30*index)
+    let sum = 0;
+
+    priceCard.forEach(function(preco, index){
+        if(condition){
+            sum = 90+(30*index)
             preco.innerText = `$${sum}/yr`;
             card[index].style.height = '10rem';
             timeYear[index].style.display = 'block';
         }else{
-            let sum = 9+(3*index)
+            sum = 9+(3*index)
             preco.innerText = `$${sum}/mo`;
             card[index].style.height = '9rem';
             timeYear[index].style.display = 'none';
         }
     })
+
+    return sum;
 }
 
-function selectionAndTotalPrice(){
-    let cardPrice = 0;
-    let addonsPrice = []
+function selectionCardMonthYear(){
+    card.forEach(cardUnic=>{
+            
+            cardUnic.addEventListener('click', ()=>{
+                card[0].classList.remove('selected-card')
+                card[1].classList.remove('selected-card')
+                card[2].classList.remove('selected-card')
+                cardUnic.classList.add('selected-card')
+                if(cardUnic.classList.contains('selected-card')){
+                    cardPrice = cardUnic.querySelector('.price-card').innerText
+                    console.log(cardUnic.querySelector('.price-card'))
+                }
+            })
+            
+        })
 
-    document.addEventListener('click', ()=>{
+    
+    //return cardPrice
+}
+
+function selectionAddons(){
         containerAddons.forEach(addon=>{
             addon.addEventListener('click', ()=>{
                 const childElement = addon.firstElementChild;
@@ -145,24 +167,14 @@ function selectionAndTotalPrice(){
                 
                 
             })
-        })
 
-        card.forEach(cardUnic=>{
-            
-            cardUnic.addEventListener('click', ()=>{
-                card[0].classList.remove('selected-card')
-                card[1].classList.remove('selected-card')
-                card[2].classList.remove('selected-card')
-                cardUnic.classList.add('selected-card')
-                cardPrice = cardUnic;
-            })
-            return cardPrice
-        })
+        
     })
-    
 }
 
-selectionAndTotalPrice()
+selectionAddons()
+
+selectionCardMonthYear()
 
 
 monthAndYear()
